@@ -10,7 +10,7 @@ def get_request(url):
     if url_request==200:
      return url_request
     else:
-        return null
+        return 0
 
 
 def get_html_page(url):
@@ -35,5 +35,5 @@ def publish_report(url):
     raw_json_dict = {"url": url, "creationDate": creation_date, "articles": articles}
     formed_json_doc = json.dumps(raw_json_dict, indent=4, ensure_ascii=False)
 
-    with open("C:/Users/Катя/PycharmProjects/2019-3-level-labs/articles.json", "w", encoding="utf-8") as file:
+    with open("C:/Users/Катя/PycharmProjects/3-level-labs/articles.json", "w", encoding="utf-8") as file:
         file.write(formed_json_doc)
